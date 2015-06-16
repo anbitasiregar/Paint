@@ -34,7 +34,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kG2-jB-6jE"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3P6-g0-s1T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jz-pr-FGT">
@@ -54,7 +54,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUs-A3-8hl"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niw-xX-SaZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-pD-hPE">
@@ -74,7 +74,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJf-vZ-Jpe"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIi-vx-W0y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzW-T8-KWn">
@@ -94,7 +94,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVa-O3-34y"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gew-kk-Vi7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v96-nU-PK1">
@@ -114,7 +114,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebf-aW-aKv"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s43-4o-OO8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-62-YRs">
@@ -134,7 +134,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0h-t3-dJP"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OqV-8O-QRy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-VX-w5y">
@@ -154,7 +154,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EfC-Ab-Hp7"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KY-mA-7bh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEB-hu-4NS">
@@ -174,7 +174,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3A-co-Vst"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zct-F4-gI4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr1-zH-LLc">
@@ -194,10 +194,10 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hA5-ey-L3C"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="id1-cs-7Ez"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uT-vk-lPA">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uT-vk-lPA">
                                 <rect key="frame" x="475" y="537" width="43" height="43"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -215,7 +215,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCN-QW-Mf4"/>
+                                    <action selector="colorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ku5-yL-RXF"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="juU-ZP-So2" userLabel="imageView">

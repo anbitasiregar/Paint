@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *orangeColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *yellowColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
+@property (weak, nonatomic) UIButton *currentButton;
 @end
 
 @implementation ViewController
@@ -30,7 +31,8 @@
     self.green = 0.0/255;
     self.blue = 0.0/255;
     self.brush = 10.0;
-    self.opacity = 1.0;
+    [self.imageView.layer setBorderWidth:5.0];
+    [self.imageView.layer setBorderColor:[[UIColor grayColor] CGColor]];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -64,7 +66,7 @@
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
     CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.brush);
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.red, self.green, self.blue, self.opacity);
+    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.red, self.green, self.blue, 1.0);
     CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeNormal);
     
     CGContextStrokePath(UIGraphicsGetCurrentContext());
@@ -80,7 +82,7 @@
         [self.imageView.image drawInRect:CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height)];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.brush);
-        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.red, self.green, self.blue, self.opacity);
+        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.red, self.green, self.blue, 1.0);
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), self.lastPoint.x, self.lastPoint.y);
         CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), self.lastPoint.x, self.lastPoint.y);
         CGContextStrokePath(UIGraphicsGetCurrentContext());
@@ -90,7 +92,7 @@
     }
     
     UIGraphicsBeginImageContext(self.imageView.frame.size);
-    [self.imageView.image drawInRect:CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height) blendMode:kCGBlendModeNormal alpha:self.opacity];
+    [self.imageView.image drawInRect:CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
     self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
@@ -102,54 +104,71 @@
 }
 
 
-- (IBAction)pencilPressed:(UIButton *)sender {
-    sender.layer.borderColor = [[UIColor blackColor] CGColor];
+- (IBAction)colorPressed:(UIButton *)sender {
+    [self.currentButton.layer setBorderWidth:0.0];
+    self.currentButton = sender;
+    [self.currentButton.layer setBorderWidth:2.0];
+    [self.currentButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
     switch(sender.tag) {
         case 0:
             self.red = 0.0/255;
             self.green = 0.0/255;
             self.blue = 0.0/255;
+            self.brush = 10;
             break;
         case 1:
             self.red = 105.0/255;
             self.green = 105.0/255;
             self.blue = 105.0/255;
+            self.brush = 10;
             break;
         case 2:
             self.red = 255.0/255;
             self.green = 0.0/255;
             self.blue = 0.0/255;
+            self.brush = 10;
             break;
         case 3:
             self.red = 0.0/255;
             self.green = 0.0/255;
             self.blue = 255.0/255;
+            self.brush = 10;
             break;
         case 4:
             self.red = 102.0/255;
             self.green = 204.0/255;
             self.blue = 0.0/255;
+            self.brush = 10;
             break;
         case 5:
             self.red = 51.0/255;
             self.green = 204.0/255;
             self.blue = 255.0/255;
+            self.brush = 10;
             break;
         case 6:
             self.red = 160.0/255;
             self.green = 82.0/255;
             self.blue = 45.0/255;
+            self.brush = 10;
             break;
         case 7:
             self.red = 255.0/255;
             self.green = 102.0/255;
             self.blue = 0.0/255;
+            self.brush = 10;
             break;
         case 8:
             self.red = 255.0/255;
             self.green = 255.0/255;
             self.blue = 0.0/255;
+            self.brush = 10;
             break;
+        case 9:
+            self.red = 255.0/255;
+            self.green = 255.0/255;
+            self.blue = 255.0/255;
+            self.brush = 20;
     }
 }
 @end
