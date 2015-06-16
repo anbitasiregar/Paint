@@ -10,6 +10,14 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) CGPoint lastPoint;
+@property (nonatomic) CGFloat red;
+@property (nonatomic) CGFloat green;
+@property (nonatomic) CGFloat blue;
+@property (nonatomic) CGFloat brush;
+@property (nonatomic) CGFloat opacity;
+@property (nonatomic) BOOL mouseSwiped;
+
 
 @end
 
