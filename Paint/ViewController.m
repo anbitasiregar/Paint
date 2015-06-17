@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *yellowColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (weak, nonatomic) UIButton *currentButton;
+@property (weak, nonatomic) IBOutlet UISlider *brushSizeSlider;
+@property (weak, nonatomic) IBOutlet UILabel *brushSizeValueLabel;
+
 @end
 
 @implementation ViewController
@@ -30,7 +33,7 @@
     self.red = 0.0/255;
     self.green = 0.0/255;
     self.blue = 0.0/255;
-    self.brush = 10.0;
+    self.brush = 5.0;
     [self.imageView.layer setBorderWidth:5.0];
     [self.imageView.layer setBorderColor:[[UIColor grayColor] CGColor]];
 }
@@ -114,61 +117,60 @@
             self.red = 0.0/255;
             self.green = 0.0/255;
             self.blue = 0.0/255;
-            self.brush = 10;
             break;
         case 1:
             self.red = 105.0/255;
             self.green = 105.0/255;
             self.blue = 105.0/255;
-            self.brush = 10;
             break;
         case 2:
             self.red = 255.0/255;
             self.green = 0.0/255;
             self.blue = 0.0/255;
-            self.brush = 10;
             break;
         case 3:
             self.red = 0.0/255;
             self.green = 0.0/255;
             self.blue = 255.0/255;
-            self.brush = 10;
             break;
         case 4:
             self.red = 102.0/255;
             self.green = 204.0/255;
             self.blue = 0.0/255;
-            self.brush = 10;
             break;
         case 5:
             self.red = 51.0/255;
             self.green = 204.0/255;
             self.blue = 255.0/255;
-            self.brush = 10;
             break;
         case 6:
             self.red = 160.0/255;
             self.green = 82.0/255;
             self.blue = 45.0/255;
-            self.brush = 10;
             break;
         case 7:
             self.red = 255.0/255;
             self.green = 102.0/255;
             self.blue = 0.0/255;
-            self.brush = 10;
             break;
         case 8:
             self.red = 255.0/255;
             self.green = 255.0/255;
             self.blue = 0.0/255;
-            self.brush = 10;
             break;
         case 9:
             self.red = 255.0/255;
             self.green = 255.0/255;
             self.blue = 255.0/255;
-            self.brush = 20;
     }
 }
+
+#pragma mark - UISlider delegates
+
+- (IBAction)sliderChanged:(UISlider *)sender {
+    self.brush = self.brushSizeSlider.value;
+    self.brushSizeValueLabel.text = [NSString stringWithFormat:@"%d", (int)rintf(self.brush)];
+}
+
+
 @end
