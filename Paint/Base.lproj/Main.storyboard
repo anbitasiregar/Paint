@@ -39,7 +39,7 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jz-pr-FGT">
                                 <rect key="frame" x="67" y="501" width="43" height="30"/>
-                                <color key="backgroundColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="Kfw-fx-HuS"/>
                                     <constraint firstAttribute="height" constant="47" id="U4w-YF-4Z0"/>
@@ -99,7 +99,7 @@
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v96-nU-PK1">
                                 <rect key="frame" x="220" y="501" width="43" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="dhx-OK-sNS"/>
                                     <constraint firstAttribute="width" constant="47" id="pIU-Fa-Ztj"/>
@@ -139,7 +139,7 @@
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-VX-w5y">
                                 <rect key="frame" x="322" y="501" width="43" height="30"/>
-                                <color key="backgroundColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.62745098039215685" green="0.32156862745098036" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="6Zd-eR-js4"/>
                                     <constraint firstAttribute="width" constant="47" id="uCJ-cL-DfV"/>
@@ -159,7 +159,7 @@
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEB-hu-4NS">
                                 <rect key="frame" x="373" y="501" width="43" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="6S7-g2-pvE"/>
                                     <constraint firstAttribute="width" constant="47" id="qvc-hb-oEP"/>
@@ -231,6 +231,16 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-YY-KZH">
+                                <rect key="frame" x="16" y="28" width="40" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJj-yR-bL3"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brush size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SS-4s-3Rt">
                                 <rect key="frame" x="16" y="563" width="68" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -252,16 +262,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-YY-KZH">
-                                <rect key="frame" x="16" y="28" width="40" height="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJj-yR-bL3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -390,6 +390,7 @@
                         <outlet property="brushSizeSlider" destination="HHC-28-1r0" id="GbN-MH-QCT"/>
                         <outlet property="brushSizeValueLabel" destination="en7-aL-TVk" id="XZH-iW-hNp"/>
                         <outlet property="darkGreenColorButton" destination="v96-nU-PK1" id="D92-BX-cCz"/>
+                        <outlet property="eraserButton" destination="7uT-vk-lPA" id="BVu-VQ-clR"/>
                         <outlet property="greyColorButton" destination="3Jz-pr-FGT" id="PiP-G7-j9B"/>
                         <outlet property="imageView" destination="juU-ZP-So2" id="lYH-B3-uP3"/>
                         <outlet property="lightBlueColorButton" destination="uHV-62-YRs" id="nX9-5o-hGk"/>

@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @property (weak, nonatomic) IBOutlet UIButton *blackColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *greyColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *redColorButton;
@@ -20,7 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *orangeColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *yellowColorButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
-@property (weak, nonatomic) UIButton *currentButton;
+@property (weak, nonatomic) IBOutlet UIButton *eraserButton;
+@property (weak, nonatomic) UIButton *currentColorButton;
+
 @property (weak, nonatomic) IBOutlet UISlider *brushSizeSlider;
 @property (weak, nonatomic) IBOutlet UILabel *brushSizeValueLabel;
 
@@ -70,8 +73,6 @@
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
     CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.brush);
     CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.red, self.green, self.blue, 1.0);
-    CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeNormal);
-    
     CGContextStrokePath(UIGraphicsGetCurrentContext());
     self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -106,12 +107,11 @@
     self.imageView.image = nil;
 }
 
-
 - (IBAction)colorPressed:(UIButton *)sender {
-    [self.currentButton.layer setBorderWidth:0.0];
-    self.currentButton = sender;
-    [self.currentButton.layer setBorderWidth:2.0];
-    [self.currentButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.currentColorButton.layer setBorderWidth:0.0];
+    self.currentColorButton = sender;
+    [self.currentColorButton.layer setBorderWidth:2.0];
+    [self.currentColorButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
     switch(sender.tag) {
         case 0:
             self.red = 0.0/255;
@@ -171,6 +171,5 @@
     self.brush = self.brushSizeSlider.value;
     self.brushSizeValueLabel.text = [NSString stringWithFormat:@"%d", (int)rintf(self.brush)];
 }
-
 
 @end
