@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (weak, nonatomic) IBOutlet UIButton *eraserButton;
 @property (weak, nonatomic) UIButton *currentColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *colorsButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *colorContainerHeightConstraint;
 
 @property (weak, nonatomic) IBOutlet UISlider *brushSizeSlider;
 @property (weak, nonatomic) IBOutlet UILabel *brushSizeValueLabel;
@@ -52,6 +54,7 @@
     self.brownColorButton.layer.cornerRadius = self.brownColorButton.frame.size.width / 2;
     self.orangeColorButton.layer.cornerRadius = self.orangeColorButton.frame.size.width / 2;
     self.yellowColorButton.layer.cornerRadius = self.yellowColorButton.frame.size.width / 2;
+    self.colorsButton.layer.cornerRadius = self.colorsButton.frame.size.width / 2;
 }
 
 #pragma mark - Drawing Methods
@@ -102,6 +105,20 @@
 }
 
 #pragma mark - UIButton delegates
+- (IBAction)colorsButtonPressed:(UIButton *)sender {
+    [self.view layoutIfNeeded];
+    if (self.colorContainerHeightConstraint.constant == 0) {
+        self.colorContainerHeightConstraint.constant = 372;
+        [UIView animateWithDuration:1.0 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    } else {
+        self.colorContainerHeightConstraint.constant = 0;
+        [UIView animateWithDuration:1.0 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
 
 - (IBAction)resetButtonPressed:(UIButton *)sender {
     self.imageView.image = nil;
